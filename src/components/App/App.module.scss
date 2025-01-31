@@ -1,0 +1,19 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 50px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 232px minmax(430px, 502px);
+  column-gap: 20px;
+}
+
+.logo {
+  margin-top: 50px;
+}

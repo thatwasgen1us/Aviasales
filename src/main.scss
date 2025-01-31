@@ -1,0 +1,89 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F3F7FA;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: .5s ease-in-out;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display';
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+body {
+  font-family: 'Open Sans', arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  color: #373737;
+  background: #f7f7f7;
+}
+
+header:after,
+.container:after,
+footer:after,
+.widget-posts-list li:after,
+#subscribe:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ant-radio-button {
+  height: 50px !important;
+}
+
+.ant-radio-group-solid :where(.css-dev-only-do-not-override-cdzvx5) {
+  min-height: 50px;
+  text-wrap: nowrap;
+  text-align: center;
+}
+
+.ant-radio-group-large :where(.css-dev-only-do-not-override-cdzvx5).ant-radio-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-btn-variant-solid {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+  height: 50px;
+  border-radius: 0;
+  background-color: #2196F3;
+}
+
+.ant-radio-group-solid :where(.css-dev-only-do-not-override-cdzvx5).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  background-color: #2196F3;
+}
