@@ -1,9 +1,10 @@
-import { RootState } from '@reduxjs/toolkit/query';
 import { Spin } from 'antd';
 import React, { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import LogoS7 from '../../assets/S7-Logo.svg';
+import { AppDispatch, RootState } from '../../redux/store';
 import { getTickets } from '../../redux/thunk';
+import { Segment } from '../../types/tickets';
 import { filterTickets } from '../../utils/filterTickets';
 import { getStopsText } from '../../utils/getStopsText';
 import { sortTickets } from '../../utils/sortTickets';
@@ -11,7 +12,7 @@ import { dateToTime, time } from '../../utils/time';
 import classes from './Card.module.scss';
 
 const Card: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const { tickets, loading, error } = useSelector((state: RootState) => state.tickets);
   const { countTicket } = useSelector((state: RootState) => state.counter);

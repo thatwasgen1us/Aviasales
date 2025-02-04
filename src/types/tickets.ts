@@ -22,7 +22,7 @@ export interface RootState {
   };
   filters: {
     allChecked: boolean;
-    filters: string[];
+    filters: boolean[];
   };
 } 
 

@@ -1,10 +1,15 @@
-import { TOGGLE_ALL, TOGGLE_FILTER } from "../action"
+import { TOGGLE_ALL, TOGGLE_FILTER } from "../action";
+
+interface Filters {
+  filter0: boolean;
+  filter1: boolean;
+  filter2: boolean;
+  filter3: boolean;
+}
 
 interface FilterState {
-  allChecked: boolean,
-  filters: {
-    [key: string]: boolean
-  },
+  allChecked: boolean;
+  filters: Filters;
 }
 
 const initialState: FilterState = {
@@ -23,7 +28,7 @@ interface ToggleAllAction {
 
 interface ToggleFilterAction {
   type: typeof TOGGLE_FILTER,
-  filter: string
+  filter: keyof Filters
 }
 
 type FilterAction = ToggleAllAction | ToggleFilterAction
@@ -32,10 +37,12 @@ const filterReducer = (state = initialState, action: FilterAction): FilterState 
   switch (action.type) {
     case TOGGLE_ALL:
       const newAllChecked = !state.allChecked
-      const updateFilters = Object.keys(state.filters).reduce((acc, filter) => {
-        acc[filter] = newAllChecked
-        return acc
-      }, {} as { [key: string]: boolean })
+      const updateFilters: Filters = {
+        filter0: newAllChecked,
+        filter1: newAllChecked,
+        filter2: newAllChecked,
+        filter3: newAllChecked
+      }
       return {
         ...state,
         allChecked: newAllChecked,

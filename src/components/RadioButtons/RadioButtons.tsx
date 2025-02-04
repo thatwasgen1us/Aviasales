@@ -4,6 +4,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedSort } from '../../redux/reducers/sortingSlice';
 import type { RootState } from '../../redux/store';
+import './RadioButtons.scss';
 
 const RadioButtons: React.FC = () => {
 	const dispatch = useDispatch();
@@ -28,6 +29,7 @@ const RadioButtons: React.FC = () => {
 				optionType="button"
 				buttonStyle="solid"
 				size="large"
+
 				onChange={handleChange}
 			/>
 		</Flex>
