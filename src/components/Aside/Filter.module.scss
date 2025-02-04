@@ -10,7 +10,6 @@
   max-height: 252px;
 
   &-title {
-
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -30,6 +29,14 @@
 
 input[type="checkbox"] {
   display: none;
+
+  &:checked+.checkbox-label img.checked {
+    display: inline-block;
+  }
+
+  &:checked+.checkbox-label img.unchecked {
+    display: none;
+  }
 }
 
 .custom-checkbox {
@@ -43,25 +50,15 @@ input[type="checkbox"] {
   position: relative;
   padding-left: 30px;
   cursor: pointer;
-}
 
-.checkbox-label img {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  & img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 
-.checkbox-label img.checked {
-  display: none;
-}
-
-/* Стили для изображения при выборе чекбокса */
-input[type="checkbox"]:checked+.checkbox-label img.checked {
-  display: inline-block;
-}
-
-input[type="checkbox"]:checked+.checkbox-label img.unchecked {
-  display: none;
-  /* Скрыть изображение, когда чекбокс выбран */
+    &.checked {
+      display: none;
+    }
+  }
 }

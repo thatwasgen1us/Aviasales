@@ -20,7 +20,6 @@
 
     }
 
-    &--logo {}
   }
 
   &__info {
@@ -28,13 +27,9 @@
     justify-content: space-between;
     align-items: center;
 
-    &--first {}
-
-    &--second {}
-
-    &--third {}
-
     &--title {
+      display: flex;
+      align-items: start;
       color: rgb(160, 176, 185);
       font-size: 12px;
       font-weight: 600;
@@ -44,6 +39,7 @@
     }
 
     &--subtitle {
+      min-width: 100px;
       color: rgb(74, 74, 74);
       font-family: Open Sans;
       font-weight: 600;
