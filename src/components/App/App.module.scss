@@ -12,6 +12,9 @@
   display: grid;
   grid-template-columns: 232px minmax(430px, 502px);
   column-gap: 20px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .logo {
