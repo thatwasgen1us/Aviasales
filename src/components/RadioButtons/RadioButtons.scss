@@ -1,4 +1,4 @@
-:where(.css-dev-only-do-not-override-cdzvx5).ant-btn-variant-solid {
+.ant-btn {
   margin-top: 20px;
   margin-bottom: 50px;
   width: 100%;
@@ -14,12 +14,33 @@
   background-color: #2196F3;
 }
 
+.ant-radio-button-wrapper-checked {
+  background-color: #2196F3!important;
+}
+
+.ant-radio-button-wrapper {
+  min-height: 50px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ant-radio-button + span {
+  font-size: 12px;  
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  font-family: 'Open Sans';
+}
+
+
 @media screen and (max-width: 768px) {
   .ant-radio-group {
     display: flex !important;
     flex-direction: column !important;
     width: 100%;
-    
+
     .ant-radio-button-wrapper {
       width: 100%;
       text-align: center;
